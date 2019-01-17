@@ -1,0 +1,12 @@
+.card{
+    height: 100%;
+    border: solid #ffffff 0.05em;
+    border-radius: 1em;
+    margin: 0vh 32vw;
+    display: grid;
+    grid-template-rows: 10% 40% 10% 40%;
+}
+
+.card_header{
+    
+}
