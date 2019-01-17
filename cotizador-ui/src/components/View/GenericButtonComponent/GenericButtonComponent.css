@@ -1,0 +1,26 @@
+.generic_btn{
+    cursor: pointer;
+    height: 100%;
+    background-color: #5b5b5b;
+    color: #fff;
+    font-size: 0.6em;
+    border-radius: 2em;
+    margin: 0 10vw;
+    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+.btn_title{
+    padding-top: 1.5vh;
+}
+
+.generic_btn:hover{
+    background-color: #d6d6d6;
+    color: #5b5b5b;
+    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+.generic_btn:active{
+    background-color: #303030;
+    color: #fff;
+    transition: .1s cubic-bezier(.95, .32, .37, 1.31);
+}
