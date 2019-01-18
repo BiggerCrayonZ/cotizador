@@ -15,7 +15,8 @@
 .details_container{
     height: 100%;
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 0.2em;
 }
 
 .details_title{

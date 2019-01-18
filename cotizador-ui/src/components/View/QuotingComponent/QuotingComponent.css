@@ -16,7 +16,8 @@
     border-bottom: solid #ffffff 0.05em;
 }
 
-.card_resume{
+.resume_card{
+    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
     height: 30vh;
     border: solid #ffffff 0.05em;
     border-radius: 1em;

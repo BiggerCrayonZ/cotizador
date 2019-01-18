@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FormComponent.css';
+import Fade from 'react-reveal/Fade';
 
 /* Components */
 import GenericDropDownComponent from '../GenericDropdownComponent/GenericDropdownComponent';
@@ -7,11 +8,7 @@ import GenericButtonComponent from '../GenericButtonComponent/GenericButtonCompo
 import YearPickerComponent from '../YearPickerComponent/YearPickerComponent';
 
 class FormComponent extends Component {
-    selectBrand = (brand) => { this.props.setBrand(brand); }
-    selectPlan = (plan) => { this.props.setPlan(plan); }
-    changeYear = (newYear) => { this.props.setYear(newYear); }
-    getQuote = () => { this.props.getQuote() };
-
+    state = { btn_flag: false }
     brandList = [
         {
             name: "Europeo",
@@ -35,6 +32,20 @@ class FormComponent extends Component {
             porcentage: 0.5
         }
     ]
+    selectBrand = (brand) => { this.props.setBrand(brand); }
+    selectPlan = (plan) => { this.props.setPlan(plan); }
+    changeYear = (newYear) => { this.props.setYear(newYear); }
+    getQuote = () => { this.props.getQuote() };
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.getPlan !== '' && nextProps.getBrand !== '') {
+            this.setState({ btn_flag: true })
+        } else {
+            this.setState({ btn_flag: false })
+        }
+
+    }
+
     render() {
         return (
             <div className="form_container">
@@ -50,7 +61,9 @@ class FormComponent extends Component {
                     <div className="plan_title subTitle">Plan:</div>
                     <GenericDropDownComponent list={this.planList} select={this.selectPlan} />
                 </section>
-                <div className="btn_section"> <GenericButtonComponent click={this.getQuote} title="Cotizar" /> </div>
+                <Fade when={this.state.btn_flag} >
+                    <div className="btn_section"> <GenericButtonComponent click={this.getQuote} title="Cotizar" /> </div>
+                </Fade>
             </div>
         );
     }
