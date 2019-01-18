@@ -3,38 +3,22 @@
     font-size: 0.6em
 }
 
-.item{
-    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
-    cursor: pointer;
-    padding-top: 1.6vh;
-    background-color: #ddd;
-    width: 100%;
-    color: #5b5b5b;
-    font-size: 0.6em;
-    vertical-align: middle;
+@media only screen and (max-width: 750px) {
+    .button_group_container {
+        font-size: 0.8em
+    }
 }
 
-.item:first-child{
-    border-radius: 2em 0 0 2em;
-}
-
-.item:last-child{
-    border-radius: 0 2em 2em 0;
-}
-
-.item:hover{
-    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
-    background-color: #5b5b5b;
-    color: #ddd;
-}
-
-.item:active{
-    background-color: #303030;
-    color: #ddd;
-    transition: .15s cubic-bezier(.95, .32, .37, 1.31);
-}
-
-.item_selected {
-    background-color: #303030;
-    color: #ddd;
+@media only screen and (max-width: 450px) {
+    .button_group_container  {
+        display: grid;
+    }
+    .button_group_container > label {
+        text-align: left;
+        margin-left: 16px;
+    }
+    .radio---control-radio---2rwkY + .radio---control-radio---2rwkY{
+        text-align: left;
+        margin-left: 20px;
+    }
 }

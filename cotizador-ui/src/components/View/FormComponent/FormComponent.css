@@ -18,3 +18,9 @@
     font-size: 0.7em;
 }
 
+@media only screen and (max-width: 450px) {
+    .form_container {
+        grid-template-rows: 40% 20% 20% 20%;
+    }
+}
+

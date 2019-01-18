@@ -7,9 +7,7 @@
     grid-template-rows: 18% 82%;
 }
 
-.form_card > div{
-    padding: 0.5em;
-}
+.form_card > div{ padding: 0.5em }
 
 .card_header{
     text-transform: uppercase;
@@ -22,4 +20,41 @@
     border: solid #ffffff 0.05em;
     border-radius: 1em;
     margin: 1em 32vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .form_card {
+        margin: 0vh 20vw;
+    }
+
+    .resume_card{
+        height: 100%;
+        margin: 1em 20vw;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .form_card {
+        margin: 0vh 8vw;
+        grid-template-rows: 20% 80%;
+    }
+
+    .resume_card{
+        height: 100%;
+        margin: 1em 8vw;
+    }
+
+    .card_header{
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .form_card {
+        height: 60vh;
+        grid-template-rows: 15% 85%;
+    }
+    .resume_card {
+        height: 30vh;
+    }
 }

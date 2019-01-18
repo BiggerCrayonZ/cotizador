@@ -33,6 +33,10 @@
     transition: .25s cubic-bezier(.95, .32, .37, 1.31);
 }
 
+.desabled_item{
+    cursor: not-allowed;
+}
+
 .left_btn:hover{
     transition: .25s cubic-bezier(.95, .32, .37, 1.31);
     background-color: #5b5b5b;
