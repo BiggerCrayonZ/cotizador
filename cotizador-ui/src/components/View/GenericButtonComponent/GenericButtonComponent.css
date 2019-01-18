@@ -1,0 +1,41 @@
+.generic_btn{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+    cursor: pointer;
+    height: 100%;
+    background-color: #5b5b5b;
+    color: #fff;
+    font-size: 0.6em;
+    border-radius: 2em;
+    margin: 0 10vw;
+    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+.btn_title{
+    padding-top: 1.5vh;
+}
+
+.generic_btn:hover{
+    background-color: #d6d6d6;
+    color: #5b5b5b;
+    transition: .25s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+.generic_btn:active{
+    background-color: #303030;
+    color: #fff;
+    transition: .1s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+@media only screen and (max-width: 750px) {
+    .generic_btn {
+        font-size: 3.5vw;
+    }
+    .btn_title{
+        padding-top: 1.2vh;
+    }
+}

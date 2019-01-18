@@ -1,0 +1,24 @@
+.button_group_container{
+    width: 100%; height: 100%;
+    font-size: 0.6em
+}
+
+@media only screen and (max-width: 750px) {
+    .button_group_container {
+        font-size: 0.8em
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .button_group_container  {
+        display: grid;
+    }
+    .button_group_container > label {
+        text-align: left;
+        margin-left: 16px;
+    }
+    .radio---control-radio---2rwkY + .radio---control-radio---2rwkY{
+        text-align: left;
+        margin-left: 20px;
+    }
+}
