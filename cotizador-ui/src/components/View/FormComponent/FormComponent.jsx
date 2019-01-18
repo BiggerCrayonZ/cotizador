@@ -8,11 +8,13 @@ import YearPickerComponent from '../YearPickerComponent/YearPickerComponent';
 
 class FormComponent extends Component {
     state = {
-        year: 2010
+        brand: 'default',
+        plan: 'defaul',
+        year: 2010,
     }
 
-    selectBrand = () => {
-        // console.log("Brand changed");
+    selectBrand = (brand) => {
+        
     }
 
     selectPlan = () => {
