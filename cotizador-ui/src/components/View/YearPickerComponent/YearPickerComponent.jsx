@@ -26,9 +26,9 @@ class YearPickerComponent extends Component {
     render() {
         return (
             <div className="selector_container">
-                {this.state.flag_left ? <div onClick={this.toggleYear.bind(null, false)} className="selector_item left_btn">{this.left}</div> : null}
+                {this.state.flag_left ? <div onClick={this.toggleYear.bind(null, false)} className="selector_item left_btn">{this.left}</div> : <div className="desabled_item selector_item left_btn">{this.left}</div>}
                 <div className="selector_item year_container">{this.props.year}</div>
-                {this.state.flag_right ? <div onClick={this.toggleYear.bind(null, true)} className="selector_item right_btn">{this.right}</div> : null}
+                {this.state.flag_right ? <div onClick={this.toggleYear.bind(null, true)} className="selector_item right_btn">{this.right}</div> : <div className="desabled_item selector_item right_btn">{this.right}</div>}
             </div>
         );
     }

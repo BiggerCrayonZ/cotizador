@@ -1,7 +1,6 @@
 .button_group_container{
     width: 100%; height: 100%;
-    display: flex;
-    flex-direction: row;
+    font-size: 0.6em
 }
 
 .item{
