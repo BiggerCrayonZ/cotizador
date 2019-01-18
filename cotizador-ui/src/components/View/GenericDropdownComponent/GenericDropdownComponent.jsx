@@ -13,7 +13,7 @@ class GenericDropdownComponent extends Component {
         let items = [];
         for (let i = 0; i < this.props.list.length; i++) {
             let element = this.props.list[i];
-            items.push(<div key={i} onClick={this.selectItem.bind(null, element.name)} className="item"> {element.name} </div>);
+            items.push(<div key={i} onClick={this.selectItem.bind(null, element)} className="item"> {element.name} </div>);
         }
         return items;
     }

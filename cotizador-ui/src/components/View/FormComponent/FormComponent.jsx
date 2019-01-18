@@ -10,6 +10,7 @@ class FormComponent extends Component {
     selectBrand = (brand) => { this.props.setBrand(brand); }
     selectPlan = (plan) => { this.props.setPlan(plan); }
     changeYear = (newYear) => { this.props.setYear(newYear); }
+    getQuote = () => { this.props.getQuote() };
 
     brandList = [
         {
@@ -27,9 +28,11 @@ class FormComponent extends Component {
     ];
     planList = [
         {
-            name: "Básico"
+            name: "Básico",
+            porcentage: 0.25
         }, {
-            name: "Completo"
+            name: "Completo",
+            porcentage: 0.5
         }
     ]
     render() {
@@ -47,7 +50,7 @@ class FormComponent extends Component {
                     <div className="plan_title subTitle">Plan:</div>
                     <GenericDropDownComponent list={this.planList} select={this.selectPlan} />
                 </section>
-                <div className="btn_section"> <GenericButtonComponent title="Cotizar" /> </div>
+                <div className="btn_section"> <GenericButtonComponent click={this.getQuote} title="Cotizar" /> </div>
             </div>
         );
     }
