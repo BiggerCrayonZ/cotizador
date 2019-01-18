@@ -1,13 +1,13 @@
-.card{
-    height: 100%;
+.form_card{
+    height: 45vh;
     border: solid #ffffff 0.05em;
     border-radius: 1em;
     margin: 0vh 32vw;
     display: grid;
-    grid-template-rows: 10% 45% 45%;
+    grid-template-rows: 18% 82%;
 }
 
-.card > div{
+.form_card > div{
     padding: 0.5em;
 }
 
@@ -16,6 +16,9 @@
     border-bottom: solid #ffffff 0.05em;
 }
 
-.card_form{
-    border-bottom: solid #ffffff 0.05em;
+.card_resume{
+    height: 30vh;
+    border: solid #ffffff 0.05em;
+    border-radius: 1em;
+    margin: 1em 32vw;
 }

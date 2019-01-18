@@ -59,9 +59,11 @@ class QuotingComponent extends Component {
 
     render() {
         return (
-            <div className="card">
-                <div className="card_header">{this.cardHeader}</div>
-                <div className="card_form"> <FormComponent getYear={this.state.year} setBrand={this.setBrand} setPlan={this.setPlan} setYear={this.setYear} getQuote={this.getQuote} /> </div>
+            <div className="quote_container">
+                <div className="form_card">
+                    <div className="card_header">{this.cardHeader}</div>
+                    <div className="card_form"> <FormComponent getYear={this.state.year} setBrand={this.setBrand} setPlan={this.setPlan} setYear={this.setYear} getQuote={this.getQuote} /> </div>
+                </div>
                 <div className="card_resume"> <ResumeComponent brand={this.state.brand.name} plan={this.state.plan.name} year={this.state.year} total={this.state.total} /> </div>
             </div>
         );
