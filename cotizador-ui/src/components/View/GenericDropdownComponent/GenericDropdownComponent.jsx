@@ -4,8 +4,8 @@ import './GenericDropdownComponent.css';
 class GenericDropdownComponent extends Component {
     state = {}
 
-    selectItem = (brand) => {
-        this.props.selectBrand(brand);
+    selectItem = (item) => {
+        this.props.select(item);
         this.renderListItems();
     }
 

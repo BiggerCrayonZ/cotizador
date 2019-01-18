@@ -7,33 +7,22 @@ import GenericButtonComponent from '../GenericButtonComponent/GenericButtonCompo
 import YearPickerComponent from '../YearPickerComponent/YearPickerComponent';
 
 class FormComponent extends Component {
-    state = {
-        brand: 'default',
-        plan: 'defaul',
-        year: 2010,
-    }
-
-    selectBrand = (brand) => {
-        
-    }
-
-    selectPlan = () => {
-        // console.log("Plan changed");
-    }
-
-    changeYear = (newYear) => {
-        this.setState({ year: newYear });
-    }
+    selectBrand = (brand) => { this.props.setBrand(brand); }
+    selectPlan = (plan) => { this.props.setPlan(plan); }
+    changeYear = (newYear) => { this.props.setYear(newYear); }
 
     brandList = [
         {
-            name: "Americano"
+            name: "Europeo",
+            value: 1500
         },
         {
-            name: "Asiatico"
+            name: "Americano",
+            value: 1000
         },
         {
-            name: "Europeo"
+            name: "Asiatico",
+            value: 500
         }
     ];
     planList = [
@@ -48,15 +37,15 @@ class FormComponent extends Component {
             <div className="form_container">
                 <section className="brand_section">
                     <div className="brand_title subTitle">Marca:</div>
-                    <GenericDropDownComponent list={this.brandList} selectBrand={this.selectBrand} />
+                    <GenericDropDownComponent list={this.brandList} select={this.selectBrand} />
                 </section>
                 <section className="year_section">
                     <div className="year_title subTitle">Año:</div>
-                    <YearPickerComponent year={this.state.year} change={this.changeYear} />
+                    <YearPickerComponent year={this.props.getYear} change={this.changeYear} />
                 </section>
                 <section className="plan_section">
                     <div className="plan_title subTitle">Plan:</div>
-                    <GenericDropDownComponent list={this.planList} selectBrand={this.selectPlan} />
+                    <GenericDropDownComponent list={this.planList} select={this.selectPlan} />
                 </section>
                 <div className="btn_section"> <GenericButtonComponent title="Cotizar" /> </div>
             </div>
