@@ -23,11 +23,11 @@ class GenericDropdownComponent extends Component {
         let items = [];
         for (let i = 0; i < this.props.list.length; i++) {
             let element = this.props.list[i];
-            console.log(element);
+            // console.log(element);
             items.push(
                 <div key={i} onClick={this.selectItem.bind(null, i)} className="item"> {element.name} </div>
             );
-            console.log('done it');
+            // console.log('done it');
         }
         return items;
     }

@@ -1,0 +1,36 @@
+.resume_container{
+    width: 100%; height: 100%;
+    display: grid;
+    grid-template-rows: 50% 5% 35%;
+}
+
+.resume_container > section {
+    padding: 0.5em;
+}
+
+.separator_section{
+    border-bottom: solid #fff 0.05em;
+}
+
+.details_container{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%
+}
+
+.details_title{
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.details_item{
+    font-size: 0.6em;
+}
+
+.total_section{
+    margin: auto;
+}
+
+.total_container{
+    font-size: 0.8em;
+}

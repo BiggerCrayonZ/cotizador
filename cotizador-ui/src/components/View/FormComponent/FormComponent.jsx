@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 import './FormComponent.css';
-import YearPicker from "react-year-picker";
 
 /* Components */
 import GenericDropDownComponent from '../GenericDropdownComponent/GenericDropdownComponent';
 import GenericButtonComponent from '../GenericButtonComponent/GenericButtonComponent';
-
+import YearPickerComponent from '../YearPickerComponent/YearPickerComponent';
 
 class FormComponent extends Component {
-    state = {}
+    state = {
+        year: 2010
+    }
 
     selectBrand = () => {
-        console.log("Brand changed");
+        // console.log("Brand changed");
     }
 
     selectPlan = () => {
-        console.log("Plan changed");
+        // console.log("Plan changed");
+    }
+
+    changeYear = (newYear) => {
+        this.setState({ year: newYear });
     }
 
     brandList = [
@@ -45,7 +50,7 @@ class FormComponent extends Component {
                 </section>
                 <section className="year_section">
                     <div className="year_title subTitle">Año:</div>
-                    <YearPicker />
+                    <YearPickerComponent year={this.state.year} change={this.changeYear} />
                 </section>
                 <section className="plan_section">
                     <div className="plan_title subTitle">Plan:</div>
